@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="@dimen/dp_20"
+    android:background="@color/black">
+    <TextView
+    android:id="@+id/text1"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:textSize="@dimen/sp_22"
+    android:textColor="@color/white"
+    android:text="Your favorites"/>
+<TextView
+    android:id="@+id/empty_text"
+    android:text="Nothing in favorites"
+    android:textSize="@dimen/sp_22"
+    android:visibility="gone"
+    android:textColor="@color/white"
+    android:layout_centerInParent="true"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"/>
+    <androidx.recyclerview.widget.RecyclerView
+    android:id="@+id/favorite_listview"
+    android:layout_marginTop="@dimen/dp_20"
+    android:layout_below="@+id/text1"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"/>
+
+</RelativeLayout>

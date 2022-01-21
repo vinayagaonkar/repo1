@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@drawable/nasa1"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activity.MainActivity">
+    <TextView
+        android:id="@+id/search_by_date"
+        android:text="Search by date"
+        android:textSize="@dimen/sp_20"
+        android:layout_marginStart="@dimen/dp_20"
+        android:layout_marginTop="@dimen/dp_20"
+        android:gravity="left"
+        android:textColor="@color/white"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+    <EditText
+        android:id="@+id/date_field"
+        android:hint="Enter date as YYYY-MM-DD "
+        android:maxLines="1"
+        android:padding="@dimen/dp_5"
+        android:background="@color/white"
+        android:layout_marginStart="@dimen/dp_20"
+        android:layout_marginTop="@dimen/dp_5"
+        android:layout_below="@+id/search_by_date"
+        android:layout_width="@dimen/dp_250"
+        android:layout_height="@dimen/dp_50"/>
+    <ImageButton
+        android:id="@+id/search_button"
+        android:layout_marginStart="@dimen/dp_5"
+        android:layout_below="@+id/search_by_date"
+        android:layout_toRightOf="@id/date_field"
+        android:src="@drawable/ic_baseline_search_24"
+        android:layout_width="@dimen/dp_70"
+        android:layout_height="@dimen/dp_60"/>
+    <ImageView
+        android:id="@+id/favourite_view"
+        android:layout_marginStart="@dimen/dp_20"
+        android:layout_below="@+id/search_by_date"
+        android:layout_toRightOf="@id/search_button"
+        android:src="@drawable/favorite_red"
+        android:layout_width="@dimen/dp_70"
+        android:layout_height="@dimen/dp_60"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recycler_view"
+        android:layout_marginTop="@dimen/dp_20"
+        android:layout_marginStart="@dimen/dp_20"
+        android:layout_marginEnd="@dimen/dp_20"
+        android:layout_below="@+id/date_field"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+    <FrameLayout
+        android:id="@+id/frame"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+</RelativeLayout>
